@@ -14,7 +14,7 @@ useEffect(() => {
   const controller = new AbortController();
   const signal = controller.signal;
   dispatch(fetchStatusActions.markFetchingStarted());
-  fetch("http://localhost:8080/items", {signal})
+  fetch("https://myntra-full-stack.onrender.com/items", { signal })
     .then((res) => res.json())
     .then(({items}) => {
       dispatch(fetchStatusActions.markFetchDone());
